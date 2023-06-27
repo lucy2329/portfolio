@@ -121,7 +121,7 @@ export default function Home() {
         {context.sharedState.finishedLoading ? <GetInTouch /> : <></>}
         {context.sharedState.finishedLoading ? (
           <Footer
-            githubUrl={"https://github.com/hktitof/my-website"}
+            githubUrl={"https://github.com/lucy2329/portfolio"}
             hideSocialsInDesktop={true}
           />
         ) : (
