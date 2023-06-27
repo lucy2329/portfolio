@@ -1,24 +1,24 @@
 import React from "react";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import ArrowIcon from "../../Icons/ArrowIcon";
-import TrouveTavoie from "./Descriptions/TrouveTavoie";
-import FeverTokens from "./Descriptions/FeverTokens";
-import IdealFresh from "./Descriptions/IdealFresh";
 import AdvancedAgroManagement from "./Descriptions/AdvancedAgroManagement";
 import Fantasia from "./Descriptions/Fantasia";
 import SuperBerry from "./Descriptions/SuperBerry";
+import AkamaiInternship from "./Descriptions/AkamaiInternship";
+import Akamai from "./Descriptions/Akamai";
+import Dystopia from "./Descriptions/Dystopia";
 export default function WhereIHaveWorked() {
   const barRef = React.useRef<HTMLDivElement>(null);
   // ? INFORMATIONAL control the green position using px,
   // ? INFORMATIONAL the default value of barRef's class should be at the beginning translate-y-[0px]
   const GetDescription = () => {
     switch (DescriptionJob) {
-      case "TrouveTavoie":
-        return <TrouveTavoie />;
-      case "FeverTokens":
-        return <FeverTokens />;
-      case "IdealFresh":
-        return <IdealFresh />;
+      case "Akamai Technologies":
+        return <Akamai />;
+      case "Akamai - Internship":
+        return <AkamaiInternship />;
+      case "Dystopia":
+        return <Dystopia />;
       case "Advanced Agro Management":
         return <AdvancedAgroManagement />;
       case "Fantasia":
@@ -27,7 +27,9 @@ export default function WhereIHaveWorked() {
         return <SuperBerry />;
     }
   };
-  const [DescriptionJob, setDescriptionJob] = React.useState("TrouveTavoie");
+  const [DescriptionJob, setDescriptionJob] = React.useState(
+    "Akamai Technologies"
+  );
   return (
     <div
       data-aos="fade-up"
@@ -46,7 +48,7 @@ export default function WhereIHaveWorked() {
         </div>
 
         <span className="text-gray-200 opacity-85 font-bold tracking-wider text-lg md:text-2xl px-3">
-          Where I&apos;ve Worked
+          Professional Experience
         </span>
         <div className="bg-gray-400 h-[0.2px] w-16 sm:w-44 md:w-80"></div>
       </section>
@@ -82,7 +84,7 @@ const CompaniesBar = (props) => {
         }}
         className={`flex-none sm:text-sm text-xs text-center md:text-left  hover:text-AAsecondary
              hover:bg-ResumeButtonHover rounded  font-mono  
-             py-3 md:pl-6 md:px-4 md:w-44 w-32 duration-500
+             py-3 md:pl-6 md:px-4 md:w-66 w-48 duration-500
              ${
                companyNameBackgroundColorGreen[
                  props.ButtonOrderOfcompanyNameBackgroundColorGreen
@@ -120,28 +122,28 @@ const CompaniesBar = (props) => {
         <div className="flex flex-row md:flex-col">
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={0}
-            CompanyName="TrouveTavoie"
+            CompanyName="Akamai Technologies"
             BarPosition={-8}
             BarAvobePosition={1}
-            DescriptionJob="TrouveTavoie"
+            DescriptionJob="Akamai Technologies"
             CompanyNameBackgroundColorGreen={[true, false, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={1}
-            CompanyName="FeverTokens"
+            CompanyName="Akamai - Internship"
             BarPosition={36}
             BarAvobePosition={129}
-            DescriptionJob="FeverTokens"
+            DescriptionJob="Akamai - Internship"
             CompanyNameBackgroundColorGreen={[false, true, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={2}
-            CompanyName="IdealFresh"
+            CompanyName="Dystopia"
             BarPosition={80}
             BarAvobePosition={257}
-            DescriptionJob="IdealFresh"
+            DescriptionJob="Dystopia"
             CompanyNameBackgroundColorGreen={[false, false, true, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />

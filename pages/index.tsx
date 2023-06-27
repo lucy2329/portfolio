@@ -14,9 +14,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Head from "next/head";
 export default function Home() {
-  const [ShowElement, setShowElement] = useState(false);
-  const [ShowThisCantBeReached, setShowThisCantBeReached] = useState(true);
-  const [ShowMe, setShowMe] = useState(false);
   // context Variable to clearInterval
   const context = useContext(AppContext);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -46,33 +43,19 @@ export default function Home() {
         context.sharedState.typing.keyboardEvent
       );
     }
-    setTimeout(() => {
-      setShowElement(true);
-    }, 4500);
-
-    setTimeout(() => {
-      setShowThisCantBeReached(false);
-    }, 5400);
-    // ? INFORMATIONAL next function will show the component after changing the state of ShowMe
-    setTimeout(() => {
-      setShowElement(false);
-      setShowMe(true);
-      context.sharedState.finishedLoading = true;
-      context.setSharedState(context.sharedState);
-    }, 10400);
   }, [context, context.sharedState]);
 
   useEffect(() => {
     Aos.init({ duration: 2000, once: true });
   }, []);
 
-  console.log("Portfolio Rendered...");
   const meta = {
     title: "Vishal Sathyanarayana - Software Engineer",
     description: `I've been working on Software development for 5 years straight. Get in touch with me to know more.`,
     image: "/titofCercle.png",
     type: "website",
   };
+  context.sharedState.finishedLoading = true;
 
   return (
     <>
@@ -89,20 +72,6 @@ export default function Home() {
         <meta property="og:image" content={meta.image} />
       </Head>
       <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
-        {context.sharedState.finishedLoading ? (
-          <></>
-        ) : ShowThisCantBeReached ? (
-          <ThisCantBeReached />
-        ) : (
-          <></>
-        )}
-        {context.sharedState.finishedLoading ? (
-          <></>
-        ) : ShowElement ? (
-          <Startup />
-        ) : (
-          <></>
-        )}
         <Header
           finishedLoading={context.sharedState.finishedLoading}
           sectionsRef={homeRef}

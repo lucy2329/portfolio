@@ -76,8 +76,15 @@ export default function MyName(props: { finishedLoading: boolean }) {
         }}
         className="text-gray-400 font-Header text-sm md:text-lg sm:text-md mt-10 tracking-wider"
       >
-        I&apos;m a <span className="text-AAsecondary">software engineer</span>{" "}
-        skilled in problem-solving and specializing in building
+        I&apos;m a fast-paced graduate student and engineer with a demonstrated
+        ability <br className="md:block hidden" /> in building efficient,
+        end-to-end scalable applications. I&apos;m quick to adapt to new tech
+        stacks and have a strong foundation of technical and problem-solving
+        abilities. I&apos;m passionate about building end-to-end experiences for
+        users and am eager to learn and work in teams to leverage technology for
+        solving real-world problems I&apos;m a{" "}
+        <span className="text-AAsecondary">software engineer</span> skilled in
+        problem-solving and specializing in building
         <br className="md:block hidden" /> (and occasionally designing)
         exceptional digital experiences. Currently.{" "}
         <br className="md:block hidden" />
