@@ -13,7 +13,7 @@ export default function WhereIHaveWorked() {
   // ? INFORMATIONAL the default value of barRef's class should be at the beginning translate-y-[0px]
   const GetDescription = () => {
     switch (DescriptionJob) {
-      case "TrouveTavoie":
+      case "Akamai Technologies":
         return <TrouveTavoie />;
       case "FeverTokens":
         return <FeverTokens />;
@@ -29,12 +29,20 @@ export default function WhereIHaveWorked() {
   };
   const [DescriptionJob, setDescriptionJob] = React.useState("TrouveTavoie");
   return (
-    <div data-aos="fade-up" className="flex flex-col items-center justify-center py-24 space-y-12 bg-AAprimary">
+    <div
+      data-aos="fade-up"
+      className="flex flex-col items-center justify-center py-24 space-y-12 bg-AAprimary"
+    >
       {/* // ? Title "Where I've Worked" */}
       <section className="flex flex-row items-center">
         <div className="flex flex-row items-center">
-          <ArrowIcon className={"flex-none h-4 md:h-6 w-4 md:w-5 text-AAsecondary"} />
-          <span className="text-AAsecondary font-sans text-sm  sm:text-xl"> 02.</span>
+          <ArrowIcon
+            className={"flex-none h-4 md:h-6 w-4 md:w-5 text-AAsecondary"}
+          />
+          <span className="text-AAsecondary font-sans text-sm  sm:text-xl">
+            {" "}
+            02.
+          </span>
         </div>
 
         <span className="text-gray-200 opacity-85 font-bold tracking-wider text-lg md:text-2xl px-3">
@@ -56,32 +64,29 @@ export default function WhereIHaveWorked() {
   );
 }
 
-const CompaniesBar = props => {
+const CompaniesBar = (props) => {
   const [barPosition, setBarPosition] = React.useState<Number>(-8); // Green bar position by the default it's -20px
   const [barAbovePosition, setBarAbovePosition] = React.useState<Number>(0);
-  const [companyNameBackgroundColorGreen, setCompanyNameBackgroundColorGreen] = React.useState<boolean[]>([
-    true,
-    false,
-    false,
-    false,
-    false,
-    ,
-    false,
-  ]);
-  const CompanyButton = props => {
+  const [companyNameBackgroundColorGreen, setCompanyNameBackgroundColorGreen] =
+    React.useState<boolean[]>([true, false, false, false, false, , false]);
+  const CompanyButton = (props) => {
     return (
       <button
         onClick={() => {
           setBarPosition(props.BarPosition);
           setBarAbovePosition(props.BarAvobePosition);
           props.setDescriptionJob(props.DescriptionJob);
-          setCompanyNameBackgroundColorGreen(props.CompanyNameBackgroundColorGreen);
+          setCompanyNameBackgroundColorGreen(
+            props.CompanyNameBackgroundColorGreen
+          );
         }}
         className={`flex-none sm:text-sm text-xs text-center md:text-left  hover:text-AAsecondary
              hover:bg-ResumeButtonHover rounded  font-mono  
              py-3 md:pl-6 md:px-4 md:w-44 w-32 duration-500
              ${
-               companyNameBackgroundColorGreen[props.ButtonOrderOfcompanyNameBackgroundColorGreen]
+               companyNameBackgroundColorGreen[
+                 props.ButtonOrderOfcompanyNameBackgroundColorGreen
+               ]
                  ? "bg-ResumeButtonHover text-AAsecondary"
                  : "text-gray-500"
              }`}
@@ -164,12 +169,22 @@ const CompaniesBar = props => {
             BarPosition={210}
             BarAvobePosition={641}
             DescriptionJob="Fantasia"
-            CompanyNameBackgroundColorGreen={[false, false, false, false, false, true]}
+            CompanyNameBackgroundColorGreen={[
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+            ]}
             setDescriptionJob={props.setDescriptionJob}
           />
         </div>
         <div className="block md:hidden w-[760px] h-0.5 rounded bg-gray-500">
-          <motion.div animate={{ x: barAbovePosition }} className="w-[128px] h-0.5 rounded bg-AAsecondary"></motion.div>
+          <motion.div
+            animate={{ x: barAbovePosition }}
+            className="w-[128px] h-0.5 rounded bg-AAsecondary"
+          ></motion.div>
         </div>
       </div>
     </div>
