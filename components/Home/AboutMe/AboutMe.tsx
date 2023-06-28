@@ -3,8 +3,15 @@ import Img from "../../../components/smallComp/image/Img";
 import ArrowIcon from "../../../components/Icons/ArrowIcon";
 export default function AboutMe(props) {
   const technologies = [
-    ["Solidity", "Next.js", "Ether.js", "JavaScript (ES6+)", "Tailwind CSS"],
-    ["Hardhat", "Node.js", "react-moralis", "TypeScript", "Framer Motion"],
+    ["C++", "Python", "Java", "React", "Next.js", "Spring Framework"],
+    [
+      "PyTorch",
+      "Docker",
+      "MongoDB & SQL",
+      "Diffusers",
+      "Hadoop & Spark",
+      "AWS",
+    ],
   ];
   return (
     <div
@@ -40,37 +47,31 @@ export default function AboutMe(props) {
           <div className="w-full md:w-7/12 space-y-4 sm:text-base text-sm ">
             <div className="font-Header ">
               <span className="text-gray-400  tracking-wide">
-                Hello! My name is Abdellatif and I enjoy solving problems and
-                creating codes that live on the internet. My interest in
-                computer science started back in 2009 when I decided to try
-                learning{" "}
-                <span className="text-AAsecondary">Ethical Hacking</span> using
-                BackTrack OS — it turns out programming skills are essential to
-                achieve that, my journey with programming started from that
-                time!
+                I enjoy solving technical problems and am currently pursuing my{" "}
+                <span className="text-AAsecondary">
+                  MS in Computer Science at Arizona State University.
+                </span>{" "}
+                I thrive on gaining a deep understanding of the latest
+                technologies and leveraging my skills to architect and develop{" "}
+                <span className="text-AAsecondary">
+                  highly efficient, scalable, and end-to-end solutions.
+                </span>{" "}
+                Whether it&apos;s through seamless user experiences or
+                leveraging the power of AI, I am committed to creating
+                applications that leave a lasting impact.
               </span>
             </div>
             <div className="font-Header tracking-wide">
               <span className="text-gray-400  ">
-                Fast-forward to today, I&apos;ve had the privilege of working at
+                My passion and tenacity to explore unique &amp; innovative
+                solutions to complex problems empowers me to push the boundaries
+                of what&apos;s possible.{" "}
                 <span className="text-AAsecondary">
-                  {" "}
-                  a huge manufacturing company
-                </span>
-                ,<span className="text-AAsecondary"> a start-up</span>,{" "}
-                <span className="text-AAsecondary">
-                  export-import companies
-                </span>
-                , also
-                <span className="text-AAsecondary"> freelancing</span> and
-                recently as Lead for the{" "}
-                <span className="text-AAsecondary">
-                  Google Developer Student club
-                </span>
-                . Experienced in Desktop & Web Development, lately with Arduino
-                Development. My main focus these days is creating and testing{" "}
-                <span className="text-AAsecondary">Smart Contracts</span> with
-                Hardhat.
+                  I love bringing ideas to life
+                </span>{" "}
+                through design &amp; engineering and am always eager to embrace
+                new challenges that foster continuous learning and personal
+                growth.
               </span>
             </div>
 
@@ -139,7 +140,7 @@ export default function AboutMe(props) {
             <div className="absolute w-48 h-full  rounded  translate-x-5 translate-y-5 border-2 border-AAsecondary"></div>
             <div className="absolute w-48 h-full rounded overflow-hidden">
               <Img
-                src={"/img/titof.jpg"}
+                src={"/img/vishal.jpg"}
                 className={"object-contain rounded-lg"}
                 alt="My Image Not Found"
               />

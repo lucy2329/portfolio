@@ -25,10 +25,9 @@ export default function GetInTouch() {
         Get In Touch
       </span>
       <p className="font-Header tracking-wider text-gray-400 text-center px-6 sm:px-16 md:px-0 md:w-[600px]">
-        I&apos;m currently looking for any new Software Engineering
-        opportunities based in the{" "}
-        <span className="text-AAsecondary">United States.</span> Please feel
-        free to reach out if you&apos;re looking for a developer, have a
+        I&apos;m currently looking for Software Engineering opportunities based
+        in the <span className="text-AAsecondary">United States.</span> Please
+        feel free to reach out if you&apos;re looking for a developer, have a
         question, or just want to connect.
       </p>
       <div className="pt-4">

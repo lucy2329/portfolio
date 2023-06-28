@@ -56,9 +56,9 @@ export default function MyName(props: { finishedLoading: boolean }) {
             duration: props.finishedLoading ? 0 : 0.2,
           },
         }}
-        className="text-gray-400 font-bold text-3xl lg:text-6xl sm:text-5xl md:text-6xl mt-4"
+        className="text-gray-400 font-bold text-3xl lg:text-4xl sm:text-5xl md:text-6xl mt-4"
       >
-        I build end-to-end scalable products.
+        Crafting applications that push the boundaries of AI innovation.
       </motion.h2>
 
       <motion.h3
@@ -76,7 +76,12 @@ export default function MyName(props: { finishedLoading: boolean }) {
         }}
         className="text-gray-400 font-Header text-sm md:text-lg sm:text-md mt-10 tracking-wider"
       >
-        I&apos;m a fast-paced graduate student and engineer with a demonstrated
+        Innovative software engineer with expertise in developing
+        high-performance <br className="md:block hidden" /> applications,
+        optimizing workflows, and building leveraging cutting-edge{" "}
+        <br className="md:block hidden" /> technologies to deliver scalable
+        solutions.
+        {/* I&apos;m a fast-paced graduate student and engineer with a demonstrated
         ability <br className="md:block hidden" /> in building efficient,
         end-to-end scalable applications. I&apos;m quick to adapt to new tech
         stacks and have a strong foundation of technical and problem-solving
@@ -90,7 +95,7 @@ export default function MyName(props: { finishedLoading: boolean }) {
         <br className="md:block hidden" />
         I&apos;m focused on creating and deploying{" "}
         <span className="text-AAsecondary">Smart Contracts</span> on the
-        Blockchain.
+        Blockchain. */}
       </motion.h3>
       <motion.div
         initial={{ y: 10, opacity: 0 }}
