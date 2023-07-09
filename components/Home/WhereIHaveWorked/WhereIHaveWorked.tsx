@@ -133,7 +133,7 @@ const CompaniesBar = (props) => {
             ButtonOrderOfcompanyNameBackgroundColorGreen={1}
             CompanyName='Akamai - Internship'
             BarPosition={36}
-            BarAvobePosition={129}
+            BarAvobePosition={192}
             DescriptionJob='Akamai - Internship'
             CompanyNameBackgroundColorGreen={[false, true, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
@@ -142,7 +142,7 @@ const CompaniesBar = (props) => {
             ButtonOrderOfcompanyNameBackgroundColorGreen={2}
             CompanyName='Dystopia'
             BarPosition={80}
-            BarAvobePosition={257}
+            BarAvobePosition={576}
             DescriptionJob='Dystopia'
             CompanyNameBackgroundColorGreen={[false, false, true, false, false]}
             setDescriptionJob={props.setDescriptionJob}
