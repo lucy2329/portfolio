@@ -148,10 +148,10 @@ const CompaniesBar = (props) => {
             setDescriptionJob={props.setDescriptionJob}
           />
         </div>
-        <div className='block md:hidden w-[380px] h-0.5 rounded bg-gray-500'>
+        <div className='block md:hidden w-[576px] h-0.5 rounded bg-gray-500'>
           <motion.div
             animate={{ x: barAbovePosition }}
-            className='w-[128px] h-0.5 rounded bg-AAsecondary'
+            className='w-[192px] h-0.5 rounded bg-AAsecondary'
           ></motion.div>
         </div>
       </div>
