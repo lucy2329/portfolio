@@ -5,9 +5,39 @@ import ArrowIcon from "../../Icons/ArrowIcon";
 import Img from "../../smallComp/image/Img";
 import GithubIcon from "../../Icons/GithubIconForSomethingIveBuild";
 import ExternalLink from "../../Icons/ExternalLink";
+import { getTasksTextWithHighlightedKeyword } from "../WhereIHaveWorked/Descriptions/taskAndType";
 
 export default function SomethingIveBuilt() {
   const router = useRouter();
+  const tasksCC = [
+    {
+      text: "  Devised an orchestrator service that delivers a fault-tolerant, highly-available database as a service on AWS cloud using REST\
+      APIs and Docker containers",
+      keywords: [
+        "orchestrator service",
+        "fault-tolerant, highly-available",
+        "Docker",
+      ],
+    },
+    {
+      text: "Enhanced the application with 3 EC2 instances, effective load balancing, microservices, and scale-in-scale-out capabilities for\
+      scalability and high availability",
+      keywords: ["load balancing", "scale-in-scale-out"],
+    },
+  ];
+  const tasksBD = [
+    {
+      text: " Developed a SQL query engine similar to Meta’s Hive by creating dynamic Java MapReduce jobs for efficient retrieval of data\
+      on the Hadoop Distributed File System (HDFS)\
+      ",
+      keywords: ["SQL query engine", "Hive", "Hadoop"],
+    },
+    {
+      text: "‚ Implemented runtime mapping of standard SQL queries to MapReduce jobs for processing large streams (order of TBs) of data\
+      present across multiple nodes in a scalable manner",
+      keywords: ["large streams", "multiple nodes"],
+    },
+  ];
   return (
     <div
       id="SomethingIveBuiltSection"
@@ -47,17 +77,17 @@ export default function SomethingIveBuilt() {
           >
             <div className="relative rounded w-full h-full col-start-6 col-span-7 ">
               <a
-                href={"https://ubiquitous-bublanina-da84ec.netlify.app/"}
+                href={"https://github.com/lucy2329/CC-FullStack"}
                 target="_blank"
                 rel="noreferrer"
               >
                 <div
                   className="absolute w-full h-full rounded bg-AAprimary 
-           transition-opacity opacity-50 hover:opacity-0 hover:cursor-pointer duration-300"
+           transition-opacity opacity-10 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </a>
               <Img
-                src={"/img/YPredict-v1.jpg"}
+                src={"/project-images/DbaaS.png"}
                 alt={"Project Screen shot"}
                 className={`w-full rounded h-full `}
               />
@@ -72,7 +102,7 @@ export default function SomethingIveBuilt() {
                 <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
                 <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
                 <Img
-                  src={"/hackme.jpg"}
+                  src={"/project-images/DbaaS.png"}
                   alt={"Project Screen shot"}
                   className={`w-full h-full`}
                 />
@@ -87,42 +117,48 @@ export default function SomethingIveBuilt() {
                 <span className="text-AAsecondary text-base">
                   Recent Project
                 </span>
-                <Link href={"/userdatapuller"}>
-                  <span className=" md:text-gray-200 text-AAsecondary font-bold text-xl hover:cursor-pointer">
-                    YPredict - v1
+                <a href={"https://github.com/lucy2329/CC-FullStack"}>
+                  <span className=" md:text-gray-200 text-AAsecondary capitalize font-bold text-xl hover:cursor-pointer">
+                    Scalable Cloud app for rideshare
                   </span>
-                </Link>
+                </a>
               </div>
               <div className="w-full md:bg-AAtertiary rounded-md py-6 md:p-6  z-10">
-                <p className="text-gray-300 md:text-gray-400 text-left ">
-                  I had the opportunity to lead the development of a token
-                  project, which aimed to create a decentralized ecosystem for
-                  peer-to-peer transactions. Overseeing the planning and
-                  development of the project, including the{" "}
-                  <span className="text-AAsecondary"> design</span> and
-                  implementation of the{" "}
-                  <span className="text-AAsecondary"> smart contract</span> and{" "}
-                  <span className="text-AAsecondary">
-                    {" "}
-                    blockchain technology
-                  </span>
-                  . Here i share with you{" "}
-                  <span className="text-AAsecondary"> YPredict - v1 </span> for
-                  the private sale.
-                </p>
+                <div className="flex flex-col space-y-4 sm:text-sm text-xs">
+                  {/* Tasks Description 1 */}
+                  {tasksCC.map((item, index) => {
+                    return (
+                      <div key={index} className="flex flex-row space-x-1">
+                        <ArrowIcon
+                          className={" h-5 w-4 text-AAsecondary flex-none"}
+                        />
+                        <span
+                          className="text-gray-500 sm:text-sm text-xs"
+                          dangerouslySetInnerHTML={{
+                            __html: getTasksTextWithHighlightedKeyword(
+                              item.text,
+                              item.keywords
+                            ),
+                          }}
+                        ></span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
               <ul
                 className="flex flex-wrap w-full text-gray-300 md:text-gray-400
                text-sm font-Text2 md:justify-start"
               >
-                <span className="pr-4 z-10">Token</span>
-                <span className="pr-4 z-10">Smart contract</span>
-                <span className="pr-4 z-10">Blockchain</span>
-                <span className="pr-4 z-10">Nextjs</span>
-                <span className="pr-4 z-10">Token tracking</span>
+                <span className="pr-4 z-10">Python</span>
+                <span className="pr-4 z-10">Flask</span>
+                <span className="pr-4 z-10">Kubernetes</span>
+                <span className="pr-4 z-10">ZooKeeper</span>
+                <span className="pr-4 z-10">AWS</span>
+                <span className="pr-4 z-10">SQL</span>
               </ul>
               <div className="z-10 flex fle-row space-x-5 ">
-                <GithubIcon link="https://github.com/hktitof/Ypredict" />
+                <GithubIcon link="https://github.com/lucy2329/CC-FullStack" />
                 <a
                   href="https://ubiquitous-bublanina-da84ec.netlify.app/"
                   target={"_blank"}
@@ -145,7 +181,7 @@ export default function SomethingIveBuilt() {
           absolute md:grid grid-cols-12 w-full h-full  content-center"
           >
             <div className="relative rounded w-full h-full col-span-7 ">
-              <Link href={"/typing"}>
+              <Link href={"https://github.com/lucy2329/MiniHive"}>
                 <div
                   // onClick={}
                   className="absolute w-full h-full rounded bg-AAsecondary 
@@ -154,7 +190,7 @@ export default function SomethingIveBuilt() {
               </Link>
 
               <Img
-                src={"/typing.png"}
+                src={"/project-images/hive.png"}
                 alt={"Project Screen shot"}
                 className={`w-full rounded h-full `}
               />
@@ -169,7 +205,7 @@ export default function SomethingIveBuilt() {
                 <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
                 <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
                 <Img
-                  src={"/typing.png"}
+                  src={"/project-images/hive.png"}
                   alt={"Project Screen shot"}
                   className={`w-full h-full `}
                 />
@@ -184,47 +220,64 @@ export default function SomethingIveBuilt() {
                 <span className="text-AAsecondary text-base">
                   Recent Project
                 </span>
-                <Link href={"/typing"}>
+                <Link href={"https://github.com/lucy2329/MiniHive"}>
                   <span className=" md:text-gray-200 text-AAsecondary font-bold text-xl hover:cursor-pointer">
-                    Speed Typing
+                    MiniHIVE
                   </span>
                 </Link>
               </div>
               <div className="w-full md:bg-AAtertiary rounded-md py-6 md:p-6  z-10">
-                <p className="text-gray-300 md:text-gray-400 text-left md:text-right">
-                  This project aim to help you to improve your{" "}
-                  <span className="text-AAsecondary"> typing </span> by tracking
-                  your progress in{" "}
-                  <span className="text-AAsecondary"> each round</span> and give
-                  you a <span className="text-AAsecondary"> score</span> based
-                  on your typing speed and accuracy through a table of{" "}
-                  <span className="text-AAsecondary"> statistics</span>.
-                </p>
+                <div className="flex flex-col space-y-4 sm:text-sm text-xs">
+                  {/* Tasks Description 1 */}
+                  {tasksBD.map((item, index) => {
+                    return (
+                      <div key={index} className="flex flex-row space-x-1">
+                        <ArrowIcon
+                          className={" h-5 w-4 text-AAsecondary flex-none"}
+                        />
+                        <span
+                          className="text-gray-500 sm:text-sm text-xs"
+                          dangerouslySetInnerHTML={{
+                            __html: getTasksTextWithHighlightedKeyword(
+                              item.text,
+                              item.keywords
+                            ),
+                          }}
+                        ></span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
               <ul
                 className="flex flex-wrap w-full text-gray-300 md:text-gray-400
                text-sm font-Text2 md:justify-end"
               >
-                <span className="pr-4 z-10">Algorithms</span>
-                <span className="pr-4 z-10">Framer Motion</span>
-                <span className="pr-4 z-10">Tailwind CSS</span>
-                <span className="pr-4 z-10">TypeScript</span>
+                <span className="pr-4 z-10">Python</span>
+                <span className="pr-4 z-10">Flask</span>
+                <span className="pr-4 z-10">Kubernetes</span>
+                <span className="pr-4 z-10">ZooKeeper</span>
+                <span className="pr-4 z-10">AWS</span>
+                <span className="pr-4 z-10">SQL</span>
               </ul>
               <div className="z-10 flex fle-row space-x-5 ">
-                <GithubIcon link="https://github.com/hktitof/Typing" />
-                <ExternalLink url={"typing"} router={router} />
+                <GithubIcon link="https://github.com/lucy2329/MiniHive" />
+                <ExternalLink
+                  url={"https://github.com/lucy2329/MiniHive"}
+                  router={router}
+                />
               </div>
             </div>
           </div>
         </div>
 
         {/* // ?  Project 3 */}
-        <div
+        {/* <div
           data-aos="fade-up"
           className="relative md:grid md:grid-cols-12 w-full md:h-96  "
-        >
-          {/* Left image */}
-          <div
+        > */}
+        {/* Left image */}
+        {/* <div
             className="hidden bg-AAprimary z-10  py-4 
           absolute md:grid grid-cols-12 w-full h-full  content-center "
           >
@@ -241,12 +294,12 @@ export default function SomethingIveBuilt() {
                 className={`w-full rounded h-full `}
               />
             </div>
-          </div>
+          </div> */}
 
-          {/* right Content */}
-          <div className=" md:absolute py-4  md:grid md:grid-cols-12 w-full h-full  content-center ">
-            {/* background for text in mobile responsive */}
-            <div className="absolute w-full h-full bg-opacity-70 z-0 md:order-2">
+        {/* right Content */}
+        {/* <div className=" md:absolute py-4  md:grid md:grid-cols-12 w-full h-full  content-center "> */}
+        {/* background for text in mobile responsive */}
+        {/* <div className="absolute w-full h-full bg-opacity-70 z-0 md:order-2">
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
                 <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
@@ -256,9 +309,9 @@ export default function SomethingIveBuilt() {
                   className={`w-full h-full`}
                 />
               </div>
-            </div>
+            </div> */}
 
-            <div
+        {/* <div
               className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6   
             col-span-8 flex flex-col items-start  space-y-3 md:order-1"
             >
@@ -299,21 +352,21 @@ export default function SomethingIveBuilt() {
                 <GithubIcon link="https://github.com/hktitof/DataPuller" />
                 <ExternalLink url={"/userdatapuller"} router={router} />
               </div>
-            </div>
-          </div>
-        </div>
+            </div> */}
+        {/* </div>
+        </div> */}
 
         {/* // ? Project 4 */}
-        <div
+        {/* <div
           data-aos="fade-up"
           className="relative md:grid md:grid-cols-12 w-full md:h-96"
-        >
-          {/* Left image */}
-          <div
+        > */}
+        {/* Left image */}
+        {/* <div
             className="hidden bg-AAprimary z-10  py-4 
           absolute md:grid grid-cols-12 w-full h-full  content-center"
-          >
-            <div className="relative rounded w-full h-full col-span-7 ">
+          > */}
+        {/* <div className="relative rounded w-full h-full col-span-7 ">
               <a
                 href="https://www.haircut.ma"
                 target={"_blank"}
@@ -338,12 +391,12 @@ export default function SomethingIveBuilt() {
                 className={`w-full rounded h-full `}
               />
             </div>
-          </div>
+          </div> */}
 
-          {/* right Content */}
-          <div className=" md:absolute py-4  md:grid md:grid-cols-12 w-full h-full  content-center ">
-            {/* background for text in mobile responsive */}
-            <div className="absolute w-full h-full bg-opacity-70 z-0">
+        {/* right Content */}
+        {/* <div className=" md:absolute py-4  md:grid md:grid-cols-12 w-full h-full  content-center "> */}
+        {/* background for text in mobile responsive */}
+        {/* <div className="absolute w-full h-full bg-opacity-70 z-0">
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
                 <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
@@ -353,14 +406,14 @@ export default function SomethingIveBuilt() {
                   className={`w-full h-full `}
                 />
               </div>
-            </div>
-            <div className="absolute w-full   rounded  ml-4 mt-2  text-end pr-8">
+            </div> */}
+        {/* <div className="absolute w-full   rounded  ml-4 mt-2  text-end pr-8">
               <div className="w-full"></div>
               <span className="text-AAsecondary sm:text-lg bg-AAprimary px-2 py-1 rounded">
                 In initiation...
               </span>
-            </div>
-            <div
+            </div> */}
+        {/* <div
               className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6 xl:col-start-7 col-start-5 
             col-span-8 flex flex-col items-start md:items-end sm:space-y-3 space-y-1"
             >
@@ -411,17 +464,17 @@ export default function SomethingIveBuilt() {
                   <ExternalLink url={""} router={router} />
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </div> */}
+        {/* </div> */}
+        {/* </div> */}
 
         {/* // ?  Project 5 */}
-        <div
+        {/* <div
           data-aos="fade-up"
           className="relative md:grid md:grid-cols-12 w-full md:h-96  "
-        >
-          {/* Left image */}
-          <div
+        > */}
+        {/* Left image */}
+        {/* <div
             className="hidden bg-AAprimary z-10  py-4 
           absolute md:grid grid-cols-12 w-full h-full  content-center "
           >
@@ -443,12 +496,12 @@ export default function SomethingIveBuilt() {
                 className={`w-full rounded h-full `}
               />
             </div>
-          </div>
+          </div> */}
 
-          {/* right Content */}
-          <div className=" md:absolute py-4  md:grid md:grid-cols-12 w-full h-full  content-center ">
-            {/* background for text in mobile responsive */}
-            <div className="absolute w-full h-full bg-opacity-70 z-0 md:order-2">
+        {/* right Content */}
+        {/* <div className=" md:absolute py-4  md:grid md:grid-cols-12 w-full h-full  content-center "> */}
+        {/* background for text in mobile responsive */}
+        {/* <div className="absolute w-full h-full bg-opacity-70 z-0 md:order-2">
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-AAprimary opacity-50 z-10"></div>
                 <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
@@ -458,9 +511,9 @@ export default function SomethingIveBuilt() {
                   className={`w-full h-full`}
                 />
               </div>
-            </div>
+            </div> */}
 
-            <div
+        {/* <div
               className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6   
             col-span-8 flex flex-col items-start  sm:space-y-3 md:order-1"
             >
@@ -503,9 +556,9 @@ export default function SomethingIveBuilt() {
               <div className="z-10 flex fle-row space-x-5 sm:pt-0 pt-2">
                 <GithubIcon link="https://github.com/hktitof/CallCenter" />
               </div>
-            </div>
-          </div>
-        </div>
+            </div> */}
+        {/* </div> */}
+        {/* </div> */}
       </div>
     </div>
   );

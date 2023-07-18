@@ -56,9 +56,10 @@ export default function MyName(props: { finishedLoading: boolean }) {
             duration: props.finishedLoading ? 0 : 0.2,
           },
         }}
-        className="text-gray-400 font-bold text-3xl lg:text-4xl sm:text-5xl md:text-6xl mt-4"
+        className="text-gray-400 capitalize font-bold text-2xl lg:text-2xl sm:text-3xl md:text-4xl mt-4"
       >
-        Crafting applications that push the boundaries of AI innovation.
+        Passionate about seamlessly integrating user needs with cutting-edge
+        capabilities
       </motion.h2>
 
       <motion.h3
@@ -78,9 +79,8 @@ export default function MyName(props: { finishedLoading: boolean }) {
       >
         Innovative software engineer with expertise in developing
         high-performance <br className="md:block hidden" /> applications,
-        optimizing workflows, and building leveraging cutting-edge{" "}
-        <br className="md:block hidden" /> technologies to deliver scalable
-        solutions.
+        optimizing workflows, and leveraging cutting-edge technologies{" "}
+        <br className="md:block hidden" /> to deliver scalable solutions.
         {/* I&apos;m a fast-paced graduate student and engineer with a demonstrated
         ability <br className="md:block hidden" /> in building efficient,
         end-to-end scalable applications. I&apos;m quick to adapt to new tech

@@ -19,8 +19,8 @@ export default function Dystopia() {
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-sm font-Arimo tracking-wide">
-            Android Developer{" "}
-            <span className="text-AAsecondary">&amp; Mentor</span>
+            Android Developer &amp; Mentor{" "}
+            <span className="text-AAsecondary">@ Dystopia</span>
           </span>
           {/* Date */}
           <span className="font-mono text-xs text-gray-500">
