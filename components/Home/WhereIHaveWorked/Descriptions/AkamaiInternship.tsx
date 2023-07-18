@@ -30,7 +30,7 @@ export default function AkamaiInternship() {
             <span className="text-AAsecondary">@ Marketplace Team</span>
           </span>
           {/* Date */}
-          <span className="font-mono text-xs text-gray-500">
+          <span className="font-mono text-sm text-gray-500">
             June 2020 - July 2020 &amp; Jan 2021 - June 2021
           </span>
         </div>

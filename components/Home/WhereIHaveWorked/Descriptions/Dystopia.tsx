@@ -23,8 +23,8 @@ export default function Dystopia() {
             <span className="text-AAsecondary">@ Dystopia</span>
           </span>
           {/* Date */}
-          <span className="font-mono text-xs text-gray-500">
-            June - August 2021
+          <span className="font-mono text-sm text-gray-500">
+            June 2021 - August 2021
           </span>
         </div>
         <div className="flex flex-col space-y-4 sm:text-sm text-xs">
