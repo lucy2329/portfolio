@@ -33,9 +33,9 @@ export default function SomethingIveBuilt() {
       keywords: ["SQL query engine", "Hive", "Hadoop"],
     },
     {
-      text: "‚ Implemented runtime mapping of standard SQL queries to MapReduce jobs for processing large streams (order of TBs) of data\
-      present across multiple nodes in a scalable manner",
-      keywords: ["large streams", "multiple nodes"],
+      text: "Implemented a query engine to map standard SQL queries to MapReduce jobs at runtime for processing large streams (order of TBs) of data\
+      present across multiple HDFS nodes in a scalable manner",
+      keywords: ["query engine", "large streams", "multiple HDFS nodes"],
     },
   ];
   return (
@@ -89,7 +89,7 @@ export default function SomethingIveBuilt() {
               <Img
                 src={"/project-images/DbaaS.png"}
                 alt={"Project Screen shot"}
-                className={`w-full rounded h-full `}
+                className={`w-full rounded pt-16 px-12`}
               />
             </div>
           </div>
@@ -178,21 +178,21 @@ export default function SomethingIveBuilt() {
           {/* Left image */}
           <div
             className="hidden bg-AAprimary z-10  py-4 
-          absolute md:grid grid-cols-12 w-full h-full  content-center"
+          absolute md:grid grid-cols-12 content-center"
           >
             <div className="relative rounded w-full h-full col-span-7 ">
               <Link href={"https://github.com/lucy2329/MiniHive"}>
                 <div
                   // onClick={}
-                  className="absolute w-full h-full rounded bg-AAsecondary 
-           transition-opacity opacity-20 hover:opacity-0 hover:cursor-pointer duration-300"
+                  className="absolute w-full h-full rounded bg-AAprimary 
+           transition-opacity opacity-10 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </Link>
 
               <Img
                 src={"/project-images/hive.png"}
                 alt={"Project Screen shot"}
-                className={`w-full rounded h-full `}
+                className={`w-full rounded h-full`}
               />
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function SomethingIveBuilt() {
             <div className="absolute w-full h-full bg-opacity-70 z-0">
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
-                <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
+                <div className="absolute w-full h-full bg-AAprimary opacity-100 z-10"></div>
                 <Img
                   src={"/project-images/hive.png"}
                   alt={"Project Screen shot"}
