@@ -253,11 +253,9 @@ export default function SomethingIveBuilt() {
                 className="flex flex-wrap w-full text-gray-300 md:text-gray-400
                text-sm font-Text2 md:justify-end"
               >
-                <span className="pr-4 z-10">Python</span>
-                <span className="pr-4 z-10">Flask</span>
-                <span className="pr-4 z-10">Kubernetes</span>
-                <span className="pr-4 z-10">ZooKeeper</span>
-                <span className="pr-4 z-10">AWS</span>
+                <span className="pr-4 z-10">Map Reduce</span>
+                <span className="pr-4 z-10">Java</span>
+                <span className="pr-4 z-10">Hadoop File System</span>
                 <span className="pr-4 z-10">SQL</span>
               </ul>
               <div className="z-10 flex fle-row space-x-5 ">
