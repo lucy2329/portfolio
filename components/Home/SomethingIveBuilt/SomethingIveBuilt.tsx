@@ -38,6 +38,27 @@ export default function SomethingIveBuilt() {
       keywords: ["query engine", "large streams", "multiple HDFS nodes"],
     },
   ];
+  const tasksStocks = [
+    {
+      text: "Scraped and cleaned 15 years of National Stock Exchange, India’s data and developed a hybrid Machine Learning model\
+      using ARIMA and LSTM to forecast and select viable stocks, maximising profit while taking minimal risk",
+      keywords: [
+        "ARIMA and LSTM",
+        "hybrid Machine Learning",
+        "15 years",
+        "maximising profit",
+      ],
+    },
+    {
+      text: "Devised a custom algorithm using CAGR and weighted returns to score and rank the top 250 companies",
+      keywords: ["algorithm", "rank the top 250 companies"],
+    },
+    {
+      text: "Achieved 14% profit on the principal amount from January 2019 to November 2019 by investing in top 10 companies\
+      shortlisted by the model",
+      keywords: ["14% profit", "January 2019 to November 2019", "top 10 "],
+    },
+  ];
   return (
     <div
       id="SomethingIveBuiltSection"
@@ -270,46 +291,46 @@ export default function SomethingIveBuilt() {
         </div>
 
         {/* // ?  Project 3 */}
-        {/* <div
+        <div
           data-aos="fade-up"
           className="relative md:grid md:grid-cols-12 w-full md:h-96  "
-        > */}
-        {/* Left image */}
-        {/* <div
+        >
+          {/* Left image */}
+          <div
             className="hidden bg-AAprimary z-10  py-4 
           absolute md:grid grid-cols-12 w-full h-full  content-center "
           >
             <div className="relative rounded w-full h-full col-start-6 col-span-7 ">
-              <Link href={"/userdatapuller"}>
+              <Link href={"https://github.com/lucy2329/Stock-Market-Analysis"}>
                 <div
-                  className="absolute w-full h-full rounded bg-AAsecondary 
-           transition-opacity opacity-20 hover:opacity-0 hover:cursor-pointer duration-300"
+                  className="absolute w-full h-full rounded bg-AAprimary 
+           transition-opacity opacity-25 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </Link>
               <Img
-                src={"/hackme.jpg"}
+                src={"/project-images/stock.png"}
                 alt={"Project Screen shot"}
                 className={`w-full rounded h-full `}
               />
             </div>
-          </div> */}
+          </div>
 
-        {/* right Content */}
-        {/* <div className=" md:absolute py-4  md:grid md:grid-cols-12 w-full h-full  content-center "> */}
-        {/* background for text in mobile responsive */}
-        {/* <div className="absolute w-full h-full bg-opacity-70 z-0 md:order-2">
+          {/* right Content */}
+          <div className=" md:absolute py-4  md:grid md:grid-cols-12 w-full h-full  content-center ">
+            {/* background for text in mobile responsive */}
+            <div className="absolute w-full h-full bg-opacity-70 z-0 md:order-2">
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
-                <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
+                <div className="absolute w-full h-full bg-AAprimary opacity-100 z-10"></div>
                 <Img
-                  src={"/hackme.jpg"}
+                  src={"/project-images/stock.png"}
                   alt={"Project Screen shot"}
                   className={`w-full h-full`}
                 />
               </div>
-            </div> */}
+            </div>
 
-        {/* <div
+            <div
               className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6   
             col-span-8 flex flex-col items-start  space-y-3 md:order-1"
             >
@@ -317,42 +338,56 @@ export default function SomethingIveBuilt() {
                 <span className="text-AAsecondary text-base">
                   Recent Project
                 </span>
-                <Link href={"/userdatapuller"}>
+                <Link
+                  href={"https://github.com/lucy2329/Stock-Market-Analysis"}
+                >
                   <span className=" md:text-gray-200 text-AAsecondary font-bold text-xl hover:cursor-pointer">
-                    User Data puller
+                    Stock Market Analysis
                   </span>
                 </Link>
               </div>
               <div className="w-full md:bg-AAtertiary rounded-md py-6 md:p-6  z-10">
-                <p className="text-gray-300 md:text-gray-400 text-left ">
-                  This project allows you to understand how easy it is to
-                  identify and track your browser based on how it appears to
-                  websites. Such as your
-                  <span className="text-AAsecondary"> location</span>,{" "}
-                  <span className="text-AAsecondary">IP Address</span>,{" "}
-                  <span className="text-AAsecondary">
-                    {","} software, Hardware
-                  </span>{" "}
-                  and some additional information with the help of cookies.
-                </p>
+                <div className="flex flex-col space-y-4 sm:text-sm text-xs">
+                  {/* Tasks Description 1 */}
+                  {tasksStocks.map((item, index) => {
+                    return (
+                      <div key={index} className="flex flex-row space-x-1">
+                        <ArrowIcon
+                          className={" h-5 w-4 text-AAsecondary flex-none"}
+                        />
+                        <span
+                          className="text-gray-500 sm:text-sm text-xs"
+                          dangerouslySetInnerHTML={{
+                            __html: getTasksTextWithHighlightedKeyword(
+                              item.text,
+                              item.keywords
+                            ),
+                          }}
+                        ></span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
               <ul
                 className="flex flex-wrap w-full text-gray-300 md:text-gray-400
                text-sm font-Text2 md:justify-start"
               >
-                <span className="pr-4 z-10">Cookies</span>
-                <span className="pr-4 z-10">Google APi</span>
-                <span className="pr-4 z-10">Data collecting</span>
-                <span className="pr-4 z-10">IP Address</span>
-                <span className="pr-4 z-10">Location</span>
+                <span className="pr-4 z-10">Python</span>
+                <span className="pr-4 z-10">R</span>
+                <span className="pr-4 z-10">ARIMA</span>
+                <span className="pr-4 z-10">LSTM</span>
               </ul>
               <div className="z-10 flex fle-row space-x-5 ">
-                <GithubIcon link="https://github.com/hktitof/DataPuller" />
-                <ExternalLink url={"/userdatapuller"} router={router} />
+                <GithubIcon link="https://github.com/lucy2329/Stock-Market-Analysis" />
+                <ExternalLink
+                  url={"https://github.com/lucy2329/Stock-Market-Analysis"}
+                  router={router}
+                />
               </div>
-            </div> */}
-        {/* </div>
-        </div> */}
+            </div>
+          </div>
+        </div>
 
         {/* // ? Project 4 */}
         {/* <div
